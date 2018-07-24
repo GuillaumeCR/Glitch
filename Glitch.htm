@@ -1,22 +1,19 @@
 <!DOCTYPE html>
+
 <head>
   <title>Glitch</title>
   <style>
-    textarea{
+    textarea {
       width: 100%;
       min-height: 30em;
     }
   </style>
 </head>
 <html>
-  <body>
-    <textarea
-      placeholder="Paste a stack trace"
-      oninput="this.value = formatStackTrace(this.value)"></textarea>
-    <script>
-      function formatStackTrace(text){
-        return text.replace(/ at /g, ' at\n');
-      }
-    </script>
-  </body>
+
+<body>
+  <textarea placeholder="Paste a stack trace" oninput="this.value = this.value.replace(/ at /g, ' at\n')">
+    </textarea>
+</body>
+
 </html>
